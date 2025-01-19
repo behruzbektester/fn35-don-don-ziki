@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Don-don ziki</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <img src="./img/logo.svg" alt="Logo" />
+        <div class="header__score score">
+          <div class="score__inner">
+            <strong class="score__title">Score</strong>
+            <span class="score__text">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Game Zone -->
+    <section class="game-zone" id="gameZone">
+      <div class="game-zone__container">
+        <button class="game-zone__button js-hand">
+          <img class="game-zone__img" src="./img/paper.svg" alt="paper" />
+        </button>
+        <button class="game-zone__button js-hand">
+          <img class="game-zone__img" src="./img/scissors.svg" alt="scissors" />
+        </button>
+        <button class="game-zone__button js-hand">
+          <img class="game-zone__img" src="./img/rock.svg" alt="rock" />
+        </button>
+      </div>
+    </section>
+
+    <!-- Game Zone Picker -->
+    <section class="game-zone-picker" id="gameZonePicker">
+      <div class="game-zone-picker__container">
+        <div class="game-zone-picker__part part">
+          <h3 class="part-title">YOU PICKED</h3>
+          <img id="humanHand" class="part-img" src="./img/paper.svg" alt="" />
+        </div>
+        <div class="game-zone-picker__status status">
+          <h2 class="status__title">YOU WIN</h2>
+          <button class="status__refresh" id="refreshGame">PLAY AGAIN</button>
+        </div>
+        <div class="game-zone-picker__part part">
+          <h3 class="part-title">THE HOUSE PICKED</h3>
+          <img id="aiHand" class="part-img" src="./img/oval.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/app.js" type="module"></script>
+  </body>
+</html>
