@@ -6,6 +6,13 @@
     <title>Don-don ziki</title>
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
@@ -15,7 +22,7 @@
         <div class="header__score score">
           <div class="score__inner">
             <strong class="score__title">Score</strong>
-            <span class="score__text">0</span>
+            <span class="score__text" id="score">0</span>
           </div>
         </div>
       </div>
@@ -34,7 +41,26 @@
           <img class="game-zone__img" src="./img/rock.svg" alt="rock" />
         </button>
       </div>
+
+      <!-- MODAL START -->
+      <div class="wrapper">
+        <button id="show-btn" class="btn show-btn">RULES</button>
+        <div class="modal hidden" id="modal">
+          <div class="modal-header">
+            <h3>RULES</h3>
+            <button id="close-btn" class="btn close-btn">
+              <i class="fas fa-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="./img/rules.svg" alt="rules" />
+          </div>
+        </div>
+      </div>
+
+      <div class="overlay hidden" id="overlay"></div>
     </section>
+    <!-- MODAL END -->
 
     <!-- Game Zone Picker -->
     <section class="game-zone-picker" id="gameZonePicker">
@@ -43,7 +69,7 @@
           <h3 class="part-title">YOU PICKED</h3>
           <img id="humanHand" class="part-img" src="./img/paper.svg" alt="" />
         </div>
-        <div class="game-zone-picker__status status">
+        <div class="game-zone-picker__status status" id="status">
           <h2 class="status__title">YOU WIN</h2>
           <button class="status__refresh" id="refreshGame">PLAY AGAIN</button>
         </div>
@@ -52,6 +78,22 @@
           <img id="aiHand" class="part-img" src="./img/oval.svg" alt="" />
         </div>
       </div>
+      <div class="wrapper">
+        <button id="show-btn" class="btn show-btn">RULES</button>
+        <div class="modal hidden" id="modal">
+          <div class="modal-header">
+            <h3>RULES</h3>
+            <button id="close-btn" class="btn close-btn">
+              <i class="fas fa-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="./img/rules.svg" alt="rules" />
+          </div>
+        </div>
+      </div>
+
+      <div class="overlay hidden" id="overlay"></div>
     </section>
 
     <script src="./js/app.js" type="module"></script>
